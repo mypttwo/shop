@@ -19,7 +19,7 @@ const Links = (props) => {
     rariblelinkJsx = (
       <a href={props.nft.rariblelink} target="_blank">
         <img
-          className="rounded"
+          className="rounded "
           src={rarible}
           style={{ maxWidth: "30px" }}
           alt={props.nft.rariblelink}

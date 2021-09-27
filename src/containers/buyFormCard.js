@@ -17,7 +17,7 @@ class BuyWithCurrencyForm extends React.Component {
     name: "",
     symbol: "",
     price: 0,
-    qty: 0,
+    qty: "",
     status: "",
     shopListener: null,
     currencyBalance: 0,
@@ -98,12 +98,13 @@ class BuyWithCurrencyForm extends React.Component {
       return <></>;
     }
     return (
-      <div className="col">
+      <div className="col" style={{ maxWidth: "20rem" }}>
         <div
-          className="card rounded-3 shadow-sm text-center"
+          className="card rounded-5 shadow-sm text-center"
           style={{ backgroundColor: "#181818" }}
         >
-          <div className="pt-3" style={{ backgroundColor: "#181818" }}>
+          <div className="mt-3" style={{ backgroundColor: "#181818" }}>
+            {/* Buy with{" "} */}
             <img
               src={this.props.currency.logo}
               className=""
@@ -111,7 +112,7 @@ class BuyWithCurrencyForm extends React.Component {
             ></img>{" "}
             <span className="fs-6">{this.state.name}</span>
             <div className="small mt-2" style={{ fontSize: ".7rem" }}>
-              Balance : {this.state.currencyBalance}
+              Balance : {this.state.currencyBalance} {this.state.symbol}
             </div>
           </div>
           <div className="card-body">

@@ -38,7 +38,7 @@ class Home extends React.Component {
                 height="30"
                 alt=""
               />
-              <div className="mx-2 d-none d-lg-block">Poltergiest Shop</div>
+              <div className="mx-2 d-none d-lg-block">Poltergeist Shop</div>
               {/* <small className="version text-info"> v1.0</small> */}
             </a>
 

@@ -65,19 +65,18 @@ class NFTSetupAdmin extends React.Component {
   };
   handleChangeCurrency = async (event) => {
     let selected = event.target.value;
-    let shopCurrencyBalance = await getCurrencyBalance(
-      event.target.value,
-      shopAddress
-    );
+    let shopCurrencyBalance = await getCurrencyBalance(selected, shopAddress);
     let price = await getPrice(
       this.state.newAddress,
       this.state.newTokenId,
-      event.target.value
+      selected
     );
     this.setState({
       selectedCurrency: selected,
       price: price,
       shopCurrencyBalance: web3.utils.fromWei(`${shopCurrencyBalance}`),
+      newPrice: "",
+      withdrawAmount: 0,
     });
   };
   parseNftUrl = async () => {

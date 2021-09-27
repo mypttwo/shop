@@ -104,14 +104,22 @@ class NFTCard extends React.Component {
           <div className="card-body">
             {titleJsx}
             <p className="card-text">{this.state.nftData.description}</p>
-          </div>
-          <div className="card-body">
-            <div>You own {this.state.balance} items </div>
-            <div>There are {this.state.shopBalance} items still available </div>
-          </div>
+            <p className="card-text text-center">
+              Find unlocked content in popular marketplaces!
+            </p>
+            <Links nft={this.props.nft}></Links>
+            {/* </div> */}
+            <hr className="text-secondary" />
+            <div className="h6 text-center mt-3">
+              Buy {this.state.nftData.name} Items
+            </div>
+            {/* <div className="card-body"> */}
+            <div style={{ fontSize: ".8rem" }}>
+              <div>There are {this.state.shopBalance} items available </div>
+              <div>You own {this.state.balance} items </div>
+            </div>
 
-          <div className="card-body">
-            <div className="row  text-center">
+            <div className="row mt-3 text-center d-flex justify-content-center">
               {currencies.map((c, index) => {
                 return (
                   <BuyWithCurrencyForm
@@ -123,9 +131,6 @@ class NFTCard extends React.Component {
               })}
             </div>
             {/* <CurrencyBtnBar></CurrencyBtnBar> */}
-          </div>
-          <div className="card-body">
-            <Links nft={this.props.nft}></Links>
           </div>
         </div>
       );
