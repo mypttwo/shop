@@ -104,6 +104,7 @@ class NFTCard extends React.Component {
           <div className="card-body">
             {titleJsx}
             <p className="card-text">{this.state.nftData.description}</p>
+            <hr className="text-secondary" />
             <p className="card-text text-center">
               Find unlocked content in popular marketplaces!
             </p>
