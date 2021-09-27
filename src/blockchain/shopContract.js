@@ -92,7 +92,6 @@ const getValue = async (nftAddress, tokenId, currencyAddress, amount) => {
 };
 
 const withdrawCurrency = async (currencyAddress, amount) => {
-  debugger;
   try {
     let contract = await setupContractForWallet(shopAddress);
     let walletConnection = await connectWallet();

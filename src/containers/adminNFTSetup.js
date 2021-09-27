@@ -64,7 +64,6 @@ class NFTSetupAdmin extends React.Component {
     }
   };
   handleChangeCurrency = async (event) => {
-    debugger;
     let selected = event.target.value;
     let shopCurrencyBalance = await getCurrencyBalance(
       event.target.value,
