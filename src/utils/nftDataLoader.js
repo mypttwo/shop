@@ -8,6 +8,7 @@ const convertIpfsLink = (ipfsLink) => {
 };
 
 const load = async (nft) => {
+  debugger;
   try {
     let uri = await getURI(nft.address, nft.tokenId);
     let link = convertIpfsLink(uri);
